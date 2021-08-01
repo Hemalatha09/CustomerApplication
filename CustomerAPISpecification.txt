@@ -1,0 +1,157 @@
+1. Add New Customer
+
+Method:POST()
+End Point : localhost:8080/customer/add
+
+Request :
+
+	{
+	"firstName" : "Jock2",
+	"lastName" : "J",
+	"company" : "TATA",
+	"designation" : "Manager",
+	"status" : "NEW",
+	"role" : "5",
+    "email":"jock1@gmail.com",
+    "mobile":"1234567098",  
+	"address" : {     
+	"street" : "NY",
+	"city": "NEWYARK",
+	"region" : "NY",
+	"postalCode" : "00001",
+	"countryCode" :"001"	,
+    "country":"US"
+	}
+	
+	}
+	
+	
+Response :
+
+{
+    "id": 20,
+    "message": "Customer added Successfully"
+}
+
+2. Update Customer
+
+Method:PUT()
+
+End Point : localhost:8080/customer/update	
+
+Request : 
+
+	{
+      "id":5 ,
+	"firstName" : "Hemalatha",
+	"lastName" : "k",
+	"company" : "TATA",
+	"designation" : "Developer",
+	"status" : "ACTIVE",
+	"role" : "5",
+    "email":"hema@gmail.com",
+    "mobile":"1234567098",  
+	"address" : {     
+	"street" : "IN",
+	"city": "Bangalore",
+	"region" : "KA",
+	"postalCode" : "560048",
+	"countryCode" :"91"	,
+    "country":"IN"
+	}
+	
+	}
+	
+Response :
+
+{
+    "id": 5,
+    "message": "Customer details updated successfully"
+}	
+
+
+3. Get List of customers.
+
+Method:GET()
+
+End Point :localhost:8080/customer/customerList
+
+Response :
+
+{
+    "total": 15,
+    "items": [
+        {
+            "id": 1,
+            "firstName": "Hemalatha",
+            "lastName": "K",
+            "company": "TATAELXSI",
+            "designation": "SoftwareEngineer",
+            "email": "test@gmail.com",
+            "mobile": "1234567098",
+            "role": 1,
+            "status": "NEW",
+            "created": "2021-07-30T18:30:00.000+00:00",
+            "createdby": 1,
+            "updated": null,
+            "updatedby": 0,
+            "address": {
+                "id": 1,
+                "street": "HOODI",
+                "city": "Bangalore",
+                "region": "IN",
+                "postalCode": "00001",
+                "countryCode": "91",
+                "country": "Bangalore"
+            }
+        },
+		]
+		
+4. Get Customer Details By Id.
+
+Method:GET()
+
+End Point : localhost:8080/customer/9
+
+Response:
+
+{
+    "id": 9,
+    "firstName": "Jock2",
+    "lastName": "J",
+    "company": "TATA",
+    "designation": "Manager",
+    "email": "jock1@gmail.com",
+    "mobile": "1234567098",
+    "role": 5,
+    "status": "ACTIVE",
+    "created": "2021-07-30T18:30:00.000+00:00",
+    "createdby": 1,
+    "updated": "2021-07-31T18:30:00.000+00:00",
+    "updatedby": 8,
+    "address": {
+        "id": 11,
+        "street": "NY",
+        "city": "NEWYARK",
+        "region": "NY",
+        "postalCode": "00001",
+        "countryCode": "001",
+        "country": "NEWYARK"
+    }
+}
+
+5. Delete Customer Details By Id.
+
+Method : DELETE()
+
+End Point : localhost:8080/customer/delete/12
+
+Response:
+
+{
+    "id": 12,
+    "message": "customer deleted successfully"
+}
+
+
+

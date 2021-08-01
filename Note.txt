@@ -1,0 +1,9 @@
+Functionality:
+This application maintains customers details.
+SecurityConfig class config method will configure basic authentication of incoming request.The requests coming through the controller will be validated and credentials configured for in-memory authentication.
+HTTP GET rest calls : Data gets cached with Redis server.Enabled caching with annotation @EnableCaching.@Cachable helps cache data for the incoming request.
+1.Adding new customer to database.
+2.Update the customer. 
+3.Get the customer details by id.
+4.Get the list of customs from database.
+5.Delete customer details by id
